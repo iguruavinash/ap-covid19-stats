@@ -1,19 +1,17 @@
-<hello name="{{ name }}"></hello>
+<h1>AP Covid 19 Districtwise Data</h1>
 <table>
   <tr>
-    <th>StateName</th>
     <th>District Name</th>
     <th>Active</th>
     <th>Confirmed</th>
     <th>Deceased</th>
     <th>Recovered</th>
-    <th> State Code</th>
-    
   </tr>
-  <tr *ngFor="let details of detailsOfCovid">
+  <tr *ngFor="let details of apCovid19Data">
     <td>{{ details.name }}</td>
-    <td> {{details.value.districtData}} </td>
-    
-    <td>{{details.value.statecode}}</td>
+    <td> {{details.value.active}} </td>
+    <td>{{details.value.confirmed}}</td>
+    <td>{{details.value.deceased}}</td>
+    <td>{{details.value.recovered}}</td>
   </tr>
 </table>
